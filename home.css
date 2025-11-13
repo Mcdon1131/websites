@@ -1,0 +1,112 @@
+.home {
+  width: 80%;
+  min-height: 83dvh;
+  position: relative;
+
+  /* 780*/
+}
+
+.home * {
+  padding: 0 10px;
+  margin: 0;
+}
+
+.home h1 {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 15px;
+
+  width: fit-content;
+  margin-bottom: 5px;
+}
+
+.home .icons {
+  padding: 0;
+
+  width: fit-content;
+}
+
+.home .icons a {
+  color: hsla(0, 0%, 100%, 0.5);
+  text-decoration: none;
+
+  font-size: 15px;
+  height: 46px;
+  display: flex;
+
+  padding: 0;
+}
+
+.home .icons a i {
+  font-size: 20px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 100%;
+}
+
+.home .icons a i:hover {
+  color: var(--accent_color);
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease-in-out;
+  transform: translateY(-4px);
+}
+
+.home h2 {
+  color: #ffffffda;
+  font-size: clamp(35px, 7vw, 60px);
+
+  width: fit-content;
+  margin: 0;
+}
+.home h3 {
+  color: var(--secondary_color);
+  font-size: clamp(40px, 8vw, 60px);
+  color: var(--secondary_color);
+
+  margin-top: 5px;
+}
+
+.home p {
+  color: var(--text_color);
+  margin-top: 20px;
+  width: 65%;
+
+  font-size: 15px;
+}
+
+@media screen and (max-width: 844px) {
+  .home p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .home .icons {
+    display: flex;
+    position: absolute;
+
+    width: 70%;
+
+    left: 15%;
+    transform: translateY(-50%);
+    justify-content: space-between;
+    bottom: 0;
+  }
+}
+
+@media screen and (min-width: 781px) {
+  .home .icons {
+    position: fixed;
+    left: clamp(20px, 3vw, 60px);
+    bottom: 0%;
+
+    height: 240px;
+
+    width: 40px;
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.cdnfonts.com/css/munich" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/anurati" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/9d86bf11c8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="media_query.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="" data-target="services">SERVICES</div>
+        <div class="" data-target="works">WORKS</div>
+        <div
+          style="font-family: 'Anurati', sans-serif"
+          class="logo active"
+          data-target="home"
+        >
+          MCDON
+        </div>
+        <div class="" data-target="about">ABOUT</div>
+        <div class data-target="contact">CONTACT</div>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <section class="section home visible" id="home">
+        <ul class="icons">
+          <a href=""><i class="fab fa-facebook -f"></i></a
+          ><a href=""><i class="fab fa-instagram"></i></a
+          ><a href=""><i class="fab fa-x-twitter"></i></a
+          ><a href=""><i class="fab fa-whatsapp"></i></a>
+        </ul>
+        <h1>Hey I'm</h1>
+        <h2>
+          Donald Fortune
+          <h2 />
+          <h3>A Web Developer</h3>
+          <p>
+            I am a web developer who specializes in Python, Java, Node.js and
+            other programming languages
+          </p>
+        </h2>
+      </section>
+      <section class="section about" style="color: white" id="about">
+        <header>
+          <span></span>
+          <div>About Me</div>
+          <span></span>
+        </header>
+        <div class="content">
+          <div class="text">
+            <p style="margin-bottom: 20px">
+              Hey there! I'm Donald Fortune and I love creating things that live
+              my interest in web development started back in 2020 when I decided
+              to try building a website for fun with some online tutorials.
+              Turns out, I really enjoyed it!
+            </p>
+            <p style="margin-bottom: 20px">
+              Since then, I've been honing my skills in various programming
+              languages like Python, Java, and Node.js. I find it fascinating
+              how code can bring ideas to life on the web. When I'm not coding,
+              I enjoy reading tech blogs and experimenting with new web
+              technologies.
+            </p>
+            <p>Here are a few Programming Languages Ive been working with</p>
+            <ul class="skills">
+              <li>Python</li>
+              <li>Java</li>
+              <li>React.js</li>
+              <li>C++</li>
+              <li>Three.js</li>
+              <li>Node.js</li>
+            </ul>
+          </div>
+          <div class="image">
+            <span
+              style="box-shadow: 0 0 20px var(--accent_color); margin-top: 10px"
+              ><img src="./me.jpg" alt=""
+            /></span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      const navLinks = document.querySelectorAll("nav div"); // all nav divs
+      const sections = document.querySelectorAll("section.section"); // all sections
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          const targetId = link.getAttribute("data-target");
+          sections.forEach((sec) => {
+            sec.classList.toggle("visible", sec.id === targetId);
+          });
+          navLinks.forEach((i) => i.classList.remove("active"));
+          link.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
