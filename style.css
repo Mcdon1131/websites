@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --primary_color: hsl(0, 0%, 0%);
   --secondary_color: hsl(275, 82%, 54%);
@@ -47,3 +48,49 @@ section {
 section.visible {
   display: block;
 }
+=======
+:root {
+  --primary_color: hsl(0, 0%, 0%);
+  --secondary_color: hsl(275, 82%, 54%);
+  --accent_color: hsl(293, 61%, 63%);
+  --accent_two: hsl(51, 91%, 78%);
+  --text_color: hsla(0, 0%, 100%, 0.5);
+  --text_color_strong: hsla(0, 0%, 100%, 0.699);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary_color);
+
+  padding-top: 100px;
+
+  justify-content: center;
+  display: flex;
+  align-items: flex-start;
+}
+section {
+  display: none;
+}
+section.visible {
+  display: block;
+}
+>>>>>>> 03654335b2042af3fc481ba834d335b4d295a1a7
