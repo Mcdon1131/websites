@@ -1,0 +1,61 @@
+nav {
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 2vw, 20px);
+
+  padding: 10px;
+  background-color: hsla(0, 0%, 5%, 0.308);
+  position: fixed;
+
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+  --webkit-backdrop-filter: blur(10px);
+  right: 0;
+  left: 0;
+}
+
+nav a {
+  color: #d8dbe2;
+  padding: 6px 10px;
+  font-size: 12px;
+
+  text-decoration: none;
+  border-radius: 4px;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:focus {
+  color: var(--accent_color);
+}
+
+nav .logo {
+  font-size: 16px;
+}
+
+nav a:hover {
+  /*color: #cc66da;*/
+  color: var(--accent_color);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    width: 100vw;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  nav .logo {
+    font-size: 13px;
+  }
+
+  nav div {
+    padding: 4px 6px;
+    font-size: 10px;
+  }
+}
+
+.active {
+  color: var(--accent_color);
+}

@@ -1,0 +1,120 @@
+.home {
+  width: 80%;
+  min-height: 83dvh;
+  position: relative;
+
+  /* 780*/
+}
+
+.home * {
+  padding: 0 10px;
+  margin: 0;
+}
+
+.home h1 {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 15px;
+
+  width: fit-content;
+  margin-bottom: 5px;
+}
+
+.home .icons {
+  padding: 0;
+
+  width: fit-content;
+}
+
+/* NOTE: The `.icons` element is used as a list in HTML but currently contains <a>
+   elements directly inside a <ul>. Ensure the HTML uses <ul><li><a>...</a></li></ul>
+   for correct semantics and screen-reader support. */
+
+.home .icons li a {
+  text-decoration: none;
+
+  height: 50px;
+
+  width: 50px;
+  display: flex;
+
+  padding: 0;
+}
+
+.home .icons a svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.home .icons a svg path {
+  fill: hsla(0, 0%, 100%, 0.5);
+  transition: fill 0.3s ease-in-out;
+}
+
+.home .icons a:hover svg path,
+.home .icons a:focus svg path,
+.home .icons a:active svg path {
+  fill: var(--accent_color);
+  cursor: pointer;
+}
+
+.home .icons a:hover svg,
+.home .icons a:focus svg,
+.home .icons a:active svg {
+  transform: translateY(-2px);
+}
+
+.home h2 {
+  color: #ffffffda;
+  font-size: clamp(35px, 7vw, 60px);
+
+  width: fit-content;
+  margin: 0;
+}
+.home h3 {
+  color: var(--secondary_color);
+  font-size: clamp(40px, 8vw, 60px);
+  color: var(--secondary_color);
+
+  margin-top: 5px;
+}
+
+.home p {
+  color: var(--text_color);
+  margin-top: 20px;
+  width: 65%;
+
+  font-size: 15px;
+}
+
+@media screen and (max-width: 844px) {
+  .home p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .home .icons {
+    display: flex;
+    position: absolute;
+
+    width: 70%;
+
+    left: 7%;
+    transform: translateY(-50%);
+    justify-content: space-between;
+    bottom: 0;
+  }
+}
+
+@media screen and (min-width: 781px) {
+  .home .icons {
+    position: fixed;
+    left: clamp(20px, 3vw, 60px);
+    bottom: 0%;
+
+    height: 240px;
+
+    width: 40px;
+  }
+}
