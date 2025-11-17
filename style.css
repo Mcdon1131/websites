@@ -11,6 +11,7 @@
   margin: 0;
   box-sizing: border-box;
   -webkit-user-drag: none;
+  -webkit-tap-highlight-color: none;
   font-family: "Montserrat", sans-serif;
 }
 
