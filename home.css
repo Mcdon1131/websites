@@ -32,6 +32,10 @@
    for correct semantics and screen-reader support. */
 .home .icons li {
   width: 25%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home .icons li a {
   text-decoration: none;
@@ -68,7 +72,7 @@
 
 .home h2 {
   color: #ffffffda;
-  font-size: clamp(35px, 7vw, 60px);
+  font-size: clamp(32px, 6vw, 60px);
 
   width: fit-content;
   margin: 0;
