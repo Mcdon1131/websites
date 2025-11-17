@@ -30,7 +30,9 @@
 /* NOTE: The `.icons` element is used as a list in HTML but currently contains <a>
    elements directly inside a <ul>. Ensure the HTML uses <ul><li><a>...</a></li></ul>
    for correct semantics and screen-reader support. */
-
+.home .icons li {
+  width: 25%;
+}
 .home .icons li a {
   text-decoration: none;
 
@@ -113,6 +115,7 @@
 @media screen and (min-width: 781px) {
   .home .icons {
     position: fixed;
+
     left: clamp(20px, 3vw, 60px);
     bottom: 0%;
 
