@@ -1,7 +1,6 @@
-
 .home {
   width: 80%;
-  height: 100dvh;
+
   position: relative;
 
   /* 780*/
@@ -99,12 +98,15 @@
     display: flex;
     position: absolute;
 
-    width: 70%;
+    left: 50%;
+    width: clamp(200px, 80%, 300px);
 
-    left: 7%;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
     justify-content: space-between;
     bottom: 0;
+  }
+  .home {
+    height: 80dvh;
   }
 }
 
@@ -119,4 +121,3 @@
     width: 40px;
   }
 }
-
