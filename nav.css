@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 nav {
   display: flex;
   justify-content: center;
@@ -60,7 +60,7 @@ nav a:hover {
 .active {
   color: var(--accent_color);
 }
-=======
+
 nav {
   display: flex;
   justify-content: center;
@@ -116,4 +116,4 @@ nav div:hover {
 .active {
   color: var(--accent_color);
 }
->>>>>>> 03654335b2042af3fc481ba834d335b4d295a1a7
+
