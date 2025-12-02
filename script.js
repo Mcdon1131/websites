@@ -14,11 +14,14 @@ navLinks.forEach((link) => {
     link.classList.add("active");
   });
 });
-
+let lastScroll = 0;
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    nav.transform = "translateY(0)";
-  } else {
-    nav.transform = "translateY(-100px)";
+  const current = window.scrollY;
+  const direction = Math.sign(current - lastScroll);
+  if (direction !== 0) {
+    nav.animate(
+      { transform: "translateY(0)" },
+      { duration: 300, fill: "both" }
+    );
   }
 });

@@ -1,5 +1,6 @@
 .about {
   width: 85%;
+  min-height: 100dvh;
 }
 
 .about .skills {
